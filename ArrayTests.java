@@ -31,8 +31,14 @@ public class ArrayTests {
   }
 
   @Test
-  public void testAverageWithoutLowest() {
+  public void testAverageWithoutLowestPass() {
     double[] input1 = {1,3,3,3,3};
+    assertEquals(3.0, ArrayExamples.averageWithoutLowest(input1),0.1);
+  }
+
+  @Test
+  public void testAverageWithoutLowestFail() {
+    double[] input1 = {2,2,2,3,3,5};
     assertEquals(3.0, ArrayExamples.averageWithoutLowest(input1),0.1);
   }
 }
